@@ -1,0 +1,109 @@
+{
+  "source": "ud-github-r2.7",
+  "splits": {
+    "train": {
+      "sentences": 3176,
+      "tokens": 57372,
+      "types_lowercased": 7606,
+      "len_mean": 18.064231738035264,
+      "len_median": 16.0,
+      "len_min": 1,
+      "len_max": 98,
+      "duplicate_sentences_within_split": 8,
+      "sentences_also_in_train": null,
+      "non_projective": 250,
+      "punct_token_ratio": 0.12249877989263055,
+      "max_tree_depth_mean": 3.77455919395466
+    },
+    "dev": {
+      "sentences": 1032,
+      "tokens": 19170,
+      "types_lowercased": 3918,
+      "len_mean": 18.575581395348838,
+      "len_median": 16.0,
+      "len_min": 2,
+      "len_max": 95,
+      "duplicate_sentences_within_split": 2,
+      "sentences_also_in_train": 2,
+      "non_projective": 102,
+      "punct_token_ratio": 0.11909233176838811,
+      "max_tree_depth_mean": 3.854651162790698
+    },
+    "test": {
+      "sentences": 1035,
+      "tokens": 17675,
+      "types_lowercased": 3669,
+      "len_mean": 17.07729468599034,
+      "len_median": 15.0,
+      "len_min": 1,
+      "len_max": 72,
+      "duplicate_sentences_within_split": 1,
+      "sentences_also_in_train": 3,
+      "non_projective": 65,
+      "punct_token_ratio": 0.12413012729844412,
+      "max_tree_depth_mean": 3.583574879227053
+    }
+  },
+  "train_deprel_top15": [
+    [
+      "punct",
+      7028
+    ],
+    [
+      "case",
+      5458
+    ],
+    [
+      "det",
+      5386
+    ],
+    [
+      "nsubj",
+      5245
+    ],
+    [
+      "nmod",
+      3476
+    ],
+    [
+      "advmod",
+      3240
+    ],
+    [
+      "root",
+      3176
+    ],
+    [
+      "obl",
+      3126
+    ],
+    [
+      "amod",
+      2677
+    ],
+    [
+      "obj",
+      2668
+    ],
+    [
+      "conj",
+      2370
+    ],
+    [
+      "aux",
+      2106
+    ],
+    [
+      "mark",
+      1927
+    ],
+    [
+      "cc",
+      1790
+    ],
+    [
+      "compound",
+      1477
+    ]
+  ]
+}

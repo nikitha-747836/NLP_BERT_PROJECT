@@ -1,0 +1,21 @@
+services:
+  project5:
+    build: .
+    image: nlp-project5-lines
+    command: ["--config", "config.yaml"]
+    volumes:
+      - ./outputs:/app/outputs
+      - ./checkpoints:/app/checkpoints
+      - ./cache:/app/cache
+      - ./dataset:/app/dataset
+      - hf_cache:/hf_cache
+    shm_size: "2gb"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+volumes:
+  hf_cache:

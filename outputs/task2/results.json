@@ -1,0 +1,130 @@
+{
+  "best_layer": 8,
+  "selected_on": "dev",
+  "best_layer_by_test_uuas": 8,
+  "best_layer_by_test_depth_spearman": 8,
+  "best_layer_metrics": {
+    "dev_uuas": 0.6563229265216021,
+    "test_uuas": 0.663159352069777,
+    "test_uuas_best_dev_rank": 0.663159352069777,
+    "dev_depth_spearman": 0.8124212785667291,
+    "test_depth_spearman": 0.8175639931400553,
+    "test_root_acc": 0.6057971014492753
+  },
+  "layer_summary": [
+    {
+      "layer": 1,
+      "dev_uuas": 0.5396404919583727,
+      "test_uuas": 0.5573169043333794,
+      "test_uuas_best_dev_rank": 0.5573169043333794,
+      "dev_depth_spearman": 0.6871322024279792,
+      "test_depth_spearman": 0.685433002700654,
+      "test_root_acc": 0.523671497584541
+    },
+    {
+      "layer": 2,
+      "dev_uuas": 0.5532639545884579,
+      "test_uuas": 0.5636162259448982,
+      "test_uuas_best_dev_rank": 0.5636162259448982,
+      "dev_depth_spearman": 0.6978354195040837,
+      "test_depth_spearman": 0.6934377899969393,
+      "test_root_acc": 0.5033816425120773
+    },
+    {
+      "layer": 3,
+      "dev_uuas": 0.5881425417849259,
+      "test_uuas": 0.6034888550463796,
+      "test_uuas_best_dev_rank": 0.6034888550463796,
+      "dev_depth_spearman": 0.7247169301017243,
+      "test_depth_spearman": 0.7249787374719776,
+      "test_root_acc": 0.5178743961352656
+    },
+    {
+      "layer": 4,
+      "dev_uuas": 0.6256070640176601,
+      "test_uuas": 0.6373390557939914,
+      "test_uuas_best_dev_rank": 0.6373390557939914,
+      "dev_depth_spearman": 0.7585881279982044,
+      "test_depth_spearman": 0.7530111462935769,
+      "test_root_acc": 0.5314009661835749
+    },
+    {
+      "layer": 5,
+      "dev_uuas": 0.6491327656890571,
+      "test_uuas": 0.6564446905717846,
+      "test_uuas_best_dev_rank": 0.6564446905717846,
+      "dev_depth_spearman": 0.7735592658561917,
+      "test_depth_spearman": 0.7712762568098525,
+      "test_root_acc": 0.5507246376811594
+    },
+    {
+      "layer": 6,
+      "dev_uuas": 0.6499526963103122,
+      "test_uuas": 0.6567215838294338,
+      "test_uuas_best_dev_rank": 0.6567215838294338,
+      "dev_depth_spearman": 0.7847041337908816,
+      "test_depth_spearman": 0.7829060321958748,
+      "test_root_acc": 0.5217391304347826
+    },
+    {
+      "layer": 7,
+      "dev_uuas": 0.6423210343740146,
+      "test_uuas": 0.6488993493008445,
+      "test_uuas_best_dev_rank": 0.6488993493008445,
+      "dev_depth_spearman": 0.8060070930597361,
+      "test_depth_spearman": 0.8079094308134899,
+      "test_root_acc": 0.6193236714975845
+    },
+    {
+      "layer": 8,
+      "dev_uuas": 0.6563229265216021,
+      "test_uuas": 0.663159352069777,
+      "test_uuas_best_dev_rank": 0.663159352069777,
+      "dev_depth_spearman": 0.8124212785667291,
+      "test_depth_spearman": 0.8175639931400553,
+      "test_root_acc": 0.6057971014492753
+    },
+    {
+      "layer": 9,
+      "dev_uuas": 0.6272469252601703,
+      "test_uuas": 0.6281323549771564,
+      "test_uuas_best_dev_rank": 0.6281323549771564,
+      "dev_depth_spearman": 0.8137910095779515,
+      "test_depth_spearman": 0.8111910925506373,
+      "test_root_acc": 0.5545893719806764
+    },
+    {
+      "layer": 10,
+      "dev_uuas": 0.5830968148848944,
+      "test_uuas": 0.5982278831510452,
+      "test_uuas_best_dev_rank": 0.5982278831510452,
+      "dev_depth_spearman": 0.7813077422077467,
+      "test_depth_spearman": 0.7810009514203711,
+      "test_root_acc": 0.49371980676328503
+    },
+    {
+      "layer": 11,
+      "dev_uuas": 0.5593188268684958,
+      "test_uuas": 0.5644469057178457,
+      "test_uuas_best_dev_rank": 0.5644469057178457,
+      "dev_depth_spearman": 0.7637442825988913,
+      "test_depth_spearman": 0.7695248758385618,
+      "test_root_acc": 0.45507246376811594
+    },
+    {
+      "layer": 12,
+      "dev_uuas": 0.5624724061810155,
+      "test_uuas": 0.5705385573861277,
+      "test_uuas_best_dev_rank": 0.5705385573861277,
+      "dev_depth_spearman": 0.780339203508794,
+      "test_depth_spearman": 0.7827894645781078,
+      "test_root_acc": 0.5314009661835749
+    }
+  ],
+  "n_skipped_long_sentences": {
+    "train": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "device": "cuda:0"
+}

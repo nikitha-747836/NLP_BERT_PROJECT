@@ -1,0 +1,56 @@
+# Project 5 - UD English LinES. All paths are relative to this file.
+seed: 42
+device: auto            # auto | cuda | cpu
+
+paths:
+  data_dir: dataset          # downloaded CoNLL-U + benchmark files (originals never modified)
+  output_dir: outputs        # results, plots, REPORT.md, run.log
+  checkpoint_dir: checkpoints
+  cache_dir: cache           # cached BERT word features (~2 GB, all 13 layers, 3 splits)
+
+data:
+  source: auto               # auto (HF -> HF parquet -> UD GitHub) | hf | github
+  hf_name: universal_dependencies
+  hf_config: en_lines
+  # UD v2.7 = the release the HF `universal_dependencies` dataset is built from
+  github_url: https://raw.githubusercontent.com/UniversalDependencies/UD_English-LinES/r2.7/en_lines-ud-{split}.conllu
+
+benchmarks:
+  wordsim_path: null         # set to a local file to override download
+  analogy_path: null
+  wordsim_urls:
+    - https://raw.githubusercontent.com/piskvorky/gensim/develop/gensim/test/test_data/wordsim353.tsv
+  analogy_urls:
+    - https://raw.githubusercontent.com/piskvorky/gensim/develop/gensim/test/test_data/questions-words.txt
+    - https://raw.githubusercontent.com/tmikolov/word2vec/master/questions-words.txt
+
+structural_check:
+  n_sentences: 20
+  seed: 42
+
+task1:
+  window: 5                  # symmetric, within sentence
+  alpha: 1.0                 # 1.0 = plain PPMI (as specified)
+  dim: 100
+  svd_power: 1.0             # vectors = U * Sigma^power
+  ablation_alpha: [1.0, 0.75]
+  ablation_svd_power: [1.0, 0.5]
+
+bert:
+  model_name: bert-base-uncased
+  extract_batch_size: auto   # auto-sized from free VRAM
+  mixed_precision: true      # bf16 on Ampere+, fp16 otherwise (inference only)
+
+task2:
+  layers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  ranks: [32, 64, 128]
+  lr: 0.001
+  batch_size: 20
+  epochs: 30
+  select_on: dev             # choose l* on dev UUAS (avoids test leakage); 'test' = literal brief
+  resume: true               # reuse saved probe checkpoints if present
+
+task3:
+  layer: null                # null -> read l* from Task 2
+  n_bootstrap: 2000
+  sweep_include_layer0: true

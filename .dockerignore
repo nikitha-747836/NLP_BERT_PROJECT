@@ -1,0 +1,7 @@
+outputs*
+checkpoints*
+cache
+dataset
+notebooks
+**/__pycache__
+*.zip
